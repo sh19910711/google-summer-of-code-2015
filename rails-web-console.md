@@ -44,7 +44,6 @@ The feature of browser extension are below:
 
 * Show console in the developer tools
 * Auto reload on change page
-* Open by console() method
 
 ![Rough Design of Extension](http://farm8.staticflickr.com/7595/16692019960_1f7b39758b_b.jpg)
 
