@@ -1,5 +1,13 @@
 # Create Web Console Browser Extensions
 
+## Contact information
+
+- Your Name: Hiroyuki Sano
+- Email Address: sh19910711@gmail.com
+- GitHub Username: https://github.com/sh19910711
+- College/University: University of Aizu, Japan
+- Subject/Major: Computer Science and Engineering
+
 ## Project Description
 
 The web-console is a debugging tool for Ruby on Rails applications.
