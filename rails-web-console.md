@@ -91,8 +91,8 @@ Here is a brief information:
 
   This is my open source software written in Ruby.
   It is a snippet manager for programming competitions.
-  * URL: https://github.com/social-snippet/social-snippet
   * URL: https://social-snippet.github.io
+  * URL: https://github.com/social-snippet/social-snippet
   * Sub Projects: https://github.com/social-snippet
 
 - duck-lang (C, Language)
