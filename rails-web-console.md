@@ -31,7 +31,7 @@ I think the similar switch is needed for the browser extension.
 My idea is to add "X-WEB-CONSOLE" to the HTTP response headers when web-console is enabled.
 In other words, if the web-console is enabled, the web application always returns "X-WEB-CONSOLE: true" as HTTP headers.
 And the browser extension is enabled only if the web application returns "X-WEB-CONSOLE: true" as its response header.
-In order to inject that HTTP header, I will extend WebConsole::Middleware for that in the web-console repository. It will be a small change.
+In order to inject that HTTP header, I will extend WebConsole::Middleware in the web-console repository. It should be a small change.
 
 About the Browser Extension, I will develop a chrome extension as prototype at first.
 When the feature forms concrete shape,
@@ -61,8 +61,6 @@ Milestone #1 - First-Term
 
 * Support Custom HTTP Header on web-console
 * Create Chrome Extension (as prototype)
-  - Show console view as devtool panel
-  - Add feature to reload console view on change page
 * [Extra Task] Find Cross-Platform Browser Extension SDK or Library
 
 
