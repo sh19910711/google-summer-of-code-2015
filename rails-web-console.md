@@ -25,6 +25,8 @@ it is important to debug applications without extra effects.
 
 ### Please describe an outline project architecture or an approach to it
 
+#### 1. Add "X-WEB-CONSOLE" to HTTP Response Header
+
 web-console is displayed by calling console() method from a view or controller.
 For example, the developer need to add a line such as "<% console %>" to the view in the case of using ERB.
 I think the similar switch is needed for the browser extension.
@@ -33,12 +35,16 @@ In other words, if the web-console is enabled, the web application always return
 And the browser extension is enabled only if the web application returns "X-WEB-CONSOLE: true" as its response header.
 In order to inject that HTTP header, I will extend WebConsole::Middleware in the web-console repository. It should be a small change.
 
-About the Browser Extension, I will develop a chrome extension as prototype at first.
+#### 2. Create Browser Extensions
+
+At first, I will create a chrome extension as prototype.
 When the feature forms concrete shape,
-then I will create Safari Extension and Firefox Extension have same behavior of the Chrome Extension.
-To keep the software simple, Browser Extension show web-console's view only.
-When the browser opens another page, the console view is also reloaded automatically.
-The developers can install the software by manually or by finding from hosting service (e.g, Chrome Web Store). 
+then I will create Firefox Extension which has same behavior with the Chrome Extension.
+The feature of browser extension are below:
+
+* Show console in the developer tools
+* Auto reload on change page
+* Open by console() method
 
 ![Rough Design of Extension](http://farm8.staticflickr.com/7595/16692019960_1f7b39758b_b.jpg)
 
