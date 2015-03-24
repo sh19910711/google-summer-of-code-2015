@@ -26,8 +26,9 @@ It is also useful to debug web applications effectively.
 
 ### Why did you choose this idea?
 
-I have some experiences of the browser extension projects,
-so it fits with my knowledge and skills.
+Debugging tools is interesting to me,
+and I have some experiences of the browser extension projects,
+so it fits with me and my skills.
 The project makes the web-console loose coupling from the Rails applications,
 it is important to debug applications without extra effects.
 
