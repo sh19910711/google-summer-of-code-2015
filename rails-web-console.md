@@ -21,16 +21,14 @@ For example, it allows to display the console aside from the web application's v
 By doing this, the console can be displayed without breaking affects to the view code of the web application,
 and the developers could use the console by just installing the browser extension.
 
-And the other thing, the extension can show the information of models and routes of the context of the current page in the browser.
-It is also useful to debug web applications effectively.
+The project makes the web-console loose coupling from the Rails applications,
+and it is important to debug applications without extra effects.
 
 ### Why did you choose this idea?
 
-Debugging tools is interesting to me,
+Basically, whatever, I am interested in the tools from debugging,
 and I have some experiences of the browser extension projects,
 so it fits with me and my skills.
-The project makes the web-console loose coupling from the Rails applications,
-it is important to debug applications without extra effects.
 
 ### Please describe an outline project architecture or an approach to it
 
