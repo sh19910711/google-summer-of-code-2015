@@ -41,9 +41,9 @@ In other words, if the browser extension is enabled, the web application always 
 The header can be enabled by writing `config.web_console.devtools = true` in the config file.
 In order to inject that HTTP header, I will extend WebConsole::Middleware in the web-console repository. It should be a small change.
 
-#### Context Viewer
+#### 2. Implement Context Viewer
 
-#### Support Browsers
+#### 3. Add Support for Browsers
 
 At first, I will create a chrome extension as prototype.
 When the feature forms concrete shape,
