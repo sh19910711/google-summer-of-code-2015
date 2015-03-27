@@ -48,7 +48,7 @@ and the user can view the list of all variables and its values.
 The context view window can show to next to the console window in the browser extension.
 I will implement it as the view of web-console (same as the console view).
 
-![Rough Design of Context View](http://farm8.staticflickr.com/7632/16946183332_5400cfd5d8_b.jpg)
+![Rough Design of Context View](https://c2.staticflickr.com/8/7632/16946183332_5400cfd5d8.jpg)
 
 #### 3. Add Support for Browsers
 
