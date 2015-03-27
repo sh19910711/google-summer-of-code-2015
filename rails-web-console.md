@@ -92,7 +92,7 @@ more useful supports of web-console.
 
 Here is a brief information:
 
-- social-snippet (Ruby) # Working in Progress Now
+- social-snippet (Ruby) # Working in Progress Now (but it should prove something of my skills)
 
   This is my open source software written in Ruby.
   It is a snippet manager for programming competitions.
@@ -112,7 +112,7 @@ Here is a brief information:
   This is my open source software written in Ruby.
   It is a Git extension for programming competitions (e.g, Google Code Jam).
   * URL: https://github.com/sh19910711/git-contest
-  * Poster: http://docs.yomogimochi.com/ruby-wc/1414904336-git-contest.pdf 
+  * Poster for "Ruby World Conference 2014" in Japan: http://docs.yomogimochi.com/ruby-wc/1414904336-git-contest.pdf 
 
 - git (C, Git)
 
