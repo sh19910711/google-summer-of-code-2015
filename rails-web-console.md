@@ -18,8 +18,7 @@ It allows to debug web application interactively.
 
 The goal of this project is to create the browser extensions of web-console.
 For example, it allows to display the console aside from the web application's view (e.g, in the developer tools of the browsers)
-By doing this, the console can be displayed without breaking affects to the view code of the web application,
-and the developers could use the console by just installing the browser extension.
+By doing this, the console can be displayed without breaking affects to the view code (HTML) of the web application.
 
 The project makes the web-console loose coupling from the Rails applications,
 and it is important to debug applications without extra effects.
@@ -32,25 +31,23 @@ so it fits with me and my skills.
 
 ### Please describe an outline project architecture or an approach to it
 
-#### 1. Add "X-WEB-CONSOLE" to HTTP Response Header
+#### 1. Add "X-WEB-CONSOLE-DEVTOOLS" as a HTTP Response Header
 
-web-console is displayed by calling console() method from a view or controller.
-For example, the developer need to add a line such as "<% console %>" to the view in the case of using ERB.
-I think the similar switch is needed for the browser extension.
-My idea is to add "X-WEB-CONSOLE" to the HTTP response headers when web-console is enabled.
-In other words, if the web-console is enabled, the web application always returns "X-WEB-CONSOLE: true" as HTTP headers.
-And the browser extension is enabled only if the web application returns "X-WEB-CONSOLE: true" as its response header.
+The web-console is displayed by calling console() method from a view or controller.
+For example, the developer will be needed to add a line such as "<% console %>" to the view in the case of using ERB.
+I think the similar switch is needed for triggering browser extension (to open, reload, and etc?).
+My idea is to add "X-WEB-CONSOLE-DEVTOOLS" to the HTTP response headers when browser extension is enabled.
+In other words, if the browser extension is enabled, the web application always returns "X-WEB-CONSOLE-DEVTOOLS: true" as a HTTP headers.
+The header can be enabled by writing `config.web_console.devtools = true` in the config file.
 In order to inject that HTTP header, I will extend WebConsole::Middleware in the web-console repository. It should be a small change.
 
-#### 2. Create Browser Extensions
+#### Context Viewer
+
+#### Support Browsers
 
 At first, I will create a chrome extension as prototype.
 When the feature forms concrete shape,
 then I will create Firefox Extension which has same behavior with the Chrome Extension.
-The feature of browser extension are below:
-
-* Show console in the developer tools
-* Auto reload on change page
 
 ![Rough Design of Extension](http://farm8.staticflickr.com/7595/16692019960_1f7b39758b_b.jpg)
 
@@ -63,7 +60,7 @@ Here is a timeline:
 
 Milestone #0 - Community Bonding Period
 
-* Brush up the feature and architecture of the software
+* Check and brush up the feature and architecture of the software
 * Find and fix issues of web-console
   - I will keep to do it in the whole terms
 
@@ -71,18 +68,19 @@ Milestone #0 - Community Bonding Period
 
 Milestone #1 - First-Term
 
-* Support Custom HTTP Header on web-console
-* Create Chrome Extension (as prototype)
-* [Extra Task] Find Cross-Platform Browser Extension SDK or Library
+* Support custom HTTP header on WebConsole::Middleware
+* Show console
+* Implement context viewer (as prototype)
+* [Extra Task] Find cross-platform browser extension SDK or library
 
 
 // 26 Jun. - 16 Aug.
 
 Milestone #2 - Second-Term
 
+* Finish to implement context viewer
 * Support Firefox
 * [Extra Task] Support Safari
-* Release Software
 
 
 ### Why will your proposal benefit Ruby on Rails?
@@ -201,4 +199,4 @@ so there is no reason not to try to contribute it in this summer.
 ## Why do you want to participate and why should Ruby on Rails choose you?
 
 I want to participate GSoC because I have to earn money to live as a student.
-
+After GSoC, I want to keep to contribute to the web console and Rails community.
