@@ -36,8 +36,10 @@ so it fits with me and my skills.
 The web-console is displayed by calling console() method from a view or controller.
 For example, the developer will be needed to add a line such as "<% console %>" to the view in the case of using ERB.
 I think the similar switch is needed for triggering browser extension (to open, reload, and etc?).
+
 My idea is to add "X-WEB-CONSOLE-DEVTOOLS" to the HTTP response headers when browser extension is enabled.
 In other words, if the browser extension is enabled, the web application always returns "X-WEB-CONSOLE-DEVTOOLS: true" as a HTTP headers.
+
 The header can be enabled by writing `config.web_console.devtools = true` in the config file.
 In order to inject that HTTP header, I will extend WebConsole::Middleware in the web-console repository. It should be a small change.
 
