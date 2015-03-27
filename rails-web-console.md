@@ -16,7 +16,7 @@ The console will be displayed in the current page of the browser,
 and the session in the console has the context of the code of the web application.
 It allows to debug web application interactively.
 
-The goal of this project is to create the browser extensions of web-console.
+The main goal of this project is to create the browser extensions of web-console.
 For example, it allows to display the console aside from the web application's view (e.g, in the developer tools of the browsers)
 By doing this, the console can be displayed without breaking affects to the view code (HTML) of the web application.
 
@@ -42,6 +42,11 @@ The header can be enabled by writing `config.web_console.devtools = true` in the
 In order to inject that HTTP header, I will extend WebConsole::Middleware in the web-console repository. It should be a small change.
 
 #### 2. Implement Context Viewer
+
+It is a tool like css properties viewer of the Chrome DevTools,
+and the user can view the list of all variables and its values.
+The context view window can show to next to the console window in the browser extension.
+I will implement it as the view of web-console (same as the console view).
 
 ![Rough Design of Context View](http://farm8.staticflickr.com/7632/16946183332_5400cfd5d8_b.jpg)
 
