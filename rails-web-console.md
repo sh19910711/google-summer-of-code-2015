@@ -43,6 +43,8 @@ In order to inject that HTTP header, I will extend WebConsole::Middleware in the
 
 #### 2. Implement Context Viewer
 
+![Rough Design of Context View](http://farm8.staticflickr.com/7632/16946183332_5400cfd5d8_b.jpg)
+
 #### 3. Add Support for Browsers
 
 At first, I will create a chrome extension as prototype.
